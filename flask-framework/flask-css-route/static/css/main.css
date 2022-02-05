@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+body{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background: rgba(0,0,0,0.3);
+	min-height: 100vh;
+}
+
+.content{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+/*paragraph*/
+.paragraph{
+	position: relative;
+	width: 90%;
+	margin-top: 2em;
+	padding: 20px;
+	border-radius: 5px;
+	background: rgba(27,38,49,0.9);
+	box-shadow: 0.1px 2px 8px 4px rgba(0,0,0,0.2);
+}
+.paragraph p{
+	color: rgba(255,255,255,0.5);
+}
+
+/*menu*/
+.menu{
+	background: #1B2631;
+	width: 90%;
+	height: 60px;
+	margin-top: 10px;
+	border-radius: 5px;
+	box-shadow: 0.1px 2px 8px 4px rgba(0,0,0,0.2);
+}
+.menu #logo{
+	color: rgba(255,255,255,0.8);
+}
+
+
+.menu ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	padding: 0 20px;
+}
+.menu ul li{
+	position: relative;
+	width: 150px;
+	margin: 10px;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.menu > ul > li:last-child{
+    width: auto;
+    padding: 0;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+}
+.menu ul li a i{
+	margin-left: 1em;
+}
+
+/*hover effect*/
+.menu ul li:hover > a{
+	color: rgba(255,255,255,0.9);
+}
+
+
+
+/*sub menu*/
+.sub_menu{
+	display: none;
+	border-radius: 5px;
+	z-index: 100;
+}
+.menu ul li:hover .sub_menu{
+	display: block;
+	position: absolute;
+	margin-top: 10px;
+	margin-left: -35px;
+}
+.menu ul li:hover .sub_menu ul{
+	display: block;
+	background: #1B2631;
+	padding: 10px;
+	border-radius: 10px;
+}
+.sub_menu ul li:hover{
+	background: rgba(255,255,255,0.1);
+}
+
+
+/*sub menu2*/
+.sub_menu2{
+	display: none;
+}
+#hover_sub_menu2:hover .sub_menu2{
+	display: block;
+	position: absolute;
+	margin-left: 94%;
+	top: -20px;
+}
+
+
+/*search box*/
+.search_box{
+	position: relative;
+}
+.search_box #search{
+	padding: 10px 15px;
+	width: 200px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	color: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,0.1);
+}
+.search_box #search::placeholder{
+	color: rgba(255,255,255,0.8);
+}
+
+.fa-search{
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	color: rgba(255,255,255,0.8);
+	transform: translateY(-50%);
+}
