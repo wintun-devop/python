@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <h2>My Project-1 Home Page</h2>
+</head>
+<body>
+    <p>My Name is {{f_name}}.</p>
+    <!-- Usage of safe on Jinja-->
+    <p>{{f_staff|safe}}</p>
+    <!-- f_fruits without for loop-->
+    <h3>Fruits output without for loop:</h3>
+    <p>{{f_fruits}}</p>
+    
+    <!-- f_fruits with for loop-->
+    <h3>Fruits output with for loop:</h3>
+    {% for fruit in f_fruits %}
+    {{fruit}}<br>
+    {%endfor%}
+
+</body>
+</html>
