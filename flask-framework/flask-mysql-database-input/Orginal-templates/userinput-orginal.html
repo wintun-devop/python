@@ -1,0 +1,33 @@
+{% extends "home-basic.html" %}
+        
+{% block content %}
+                
+<center><br>
+  <form method="post" >
+        <div class="row g-3">
+            <div class="col">
+            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+            <div class="col-12">
+                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                <select class="form-select" id="inlineFormSelectPref">
+                <option selected>Choose Male or Female</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                </select>
+            </div><br>
+            <div class="col-12">
+                <input type="email" class="form-control" id="colFormLabelLg" placeholder="Email Address">
+            </div><br>
+        </div><br>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+  </form>
+</center>
+
+
+{% endblock %}

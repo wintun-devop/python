@@ -1,0 +1,43 @@
+{% extends "home-basic.html" %}
+        
+{% block content %}
+                
+<center><br>
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% if input_firstname and input_lastname %}
+        <table class="table table-hover table-dark table-bordered table-striped">
+            {% for dispplayuser in disply_users %}
+            <tr>
+                <td>{{ dispplayuser.id }} - {{ dispplayuser.firstname }} {{ dispplayuser.lastname }} - {{ dispplayuser.email }} - {{ dispplayuser.gender }} </td>
+            </tr>
+            {% endfor %}             
+        </table>
+    {% else %}
+        <h3>User to Input:</h3>
+        <form method="post" ><br>
+            {{ input_form.hidden_tag() }}
+            {{ input_form.firstname( class="form-control") }}<br>
+            {{ input_form.lastname( class="form-control") }}<br>
+            {{ input_form.email( class="form-control ") }}<br>
+            {{ input_form.gender( class="form-control ") }}<br>
+            {{ input_form.submit(class="btn btn-primary mb-3") }}  
+        </form><br><br>
+        <h3>Users in Databases</h3>
+            <table class="table table-hover table-dark table-bordered table-striped">
+                {% for dispplayuser in disply_users %}
+                <tr>
+                    <td>{{ dispplayuser.id }} - {{ dispplayuser.firstname }} {{ dispplayuser.lastname }} - {{ dispplayuser.email }} - {{ dispplayuser.gender }} </td>
+                </tr>
+                {% endfor %}             
+            </table>
+
+    {% endif %}
+</center>
+
+
+{% endblock %}
