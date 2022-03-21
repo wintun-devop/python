@@ -5,9 +5,17 @@ from datetime import date
 
 #current date and time
 current_date_time=datetime.datetime.now()
+
+#current date only
+current_date=datetime.datetime.utcnow().date()
+
 print(f"Current date and time in acutual format is {current_date_time}.")
 #current date time in readable fromat
 current_date_time_redable=current_date_time.strftime("%Y-%m-%d %H:%M:%S")
+#current date only
+print(f"Current date is {current_date}.")
+
+
 print(f"Current date and time in redable format is {current_date_time_redable}.")
 #current date only 
 current_date = "%s/%s/%s" %(current_date_time.year, current_date_time.month, current_date_time.day)
