@@ -22,7 +22,7 @@ def database_establish(db_name,db_user,db_password,db_host):
     return db_cursor
 
 def check_tabledata_list(table_name):
-    db_connection_cursor=database_establish("dvd_rental_01","dbadmin","Abc123Abc123","172.18.0.3")
+    db_connection_cursor=database_establish("dvd_rental_01","dbadmin","BarNyarTharDaKar","172.18.0.3")
     db_connection_cursor.execute("SELECT * FROM {};".format(table_name))
     db_rows=db_connection_cursor.fetchall()
     db_row_number=db_connection_cursor.rowcount
@@ -33,7 +33,7 @@ def check_tabledata_list(table_name):
 
 def create_database(databae_name):
     database=databae_name
-    db_connection=connect(dbname="dvd_rental_01",user="dbadmin",host="172.18.0.3",password="Abc123Abc123")
+    db_connection=connect(dbname="dvd_rental_01",user="dbadmin",host="172.18.0.3",password="BarNyarTharDaKar")
     """
     ISOLATION LEVELS for psycopg2,0 = READ UNCOMMITTED,1 = READ COMMITTED,2 = REPEATABLE READ,3 = SERIALIZABLE,4 = DEFAULT
     """
