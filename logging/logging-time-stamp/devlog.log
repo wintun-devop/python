@@ -1,0 +1,8 @@
+
+
+
+DEBUG:root:This is debut log at 2022-11-19 19:20:14.
+INFO:root:This is info log at 2022-11-19 19:20:14.
+WARNING:root:This is warming log at 2022-11-19 19:20:14.
+CRITICAL:root:This is critical log at 2022-11-19 19:20:14.
+ERROR:root:This is error log at 2022-11-19 19:20:14.
