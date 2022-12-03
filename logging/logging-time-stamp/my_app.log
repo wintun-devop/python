@@ -1,0 +1,5 @@
+2022-12-04 00:20:56,864 — Testing Debuging message. — DEBUG — This is debug message.
+2022-12-04 00:20:56,864 — Testing Info message. — INFO — This is info message.
+2022-12-04 00:20:56,865 — Testing Warning message. — WARNING — This is warning message.
+2022-12-04 00:20:56,865 — Testing Error message. — ERROR — This is error message.
+2022-12-04 00:20:56,865 — Testing Critical message. — CRITICAL — This is critical message.
