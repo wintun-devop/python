@@ -17,5 +17,18 @@ fruits=["apple","mango","avogadro","barry","pineapple","pear"]
 zip_a_lip=list(zip(fruits,num_list))
 print(zip_a_lip)
 
+#filter function
+def filter_a_list(i):
+    a_list = ["apple","mango","avogadro","barry","pineapple","pear",4,8,4.5,10,16,6.8,8.3,6.9,9,11]
+    filter_result = []
+    for result in a_list:
+        if result == i:
+            filter_result.append(result)
+    if filter_result == []:
+        return False
+    else:
+        print(filter_result)
+        return True
+
 
 
