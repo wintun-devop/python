@@ -13,6 +13,20 @@ def get_global_datetime(timezone):
     print(json_data)
     
 
+def get_global_datetimestemps(timezone):
+    URL1 = "https://worldtimeapi.org/api/timezone/"+timezone
+    #URL2 = "http://worldtimeapi.net/api/timezone/"+timezone
+    try:
+        response = requests.request("GET",URL1)
+        dictionary_data = response.json()
+        #json_data = json.dumps(dictionary_data)
+        currentDateTime = dictionary_data["datetime"]
+        print(currentDateTime)
+    except:
+        error = {}
+        error.update({1:"API call error"})
+        print(error[1])
+
 
 
 get_global_datetime("Asia/Tokyo")
